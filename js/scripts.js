@@ -8,9 +8,11 @@ $(document).ready(function() {
     foods.forEach(function(food) {
       var userInput = $("input#" + food).val();
       $(food).text(userInput);
+      $('ol#list').prepend("<li>" + food + "</li>");
     });
 
     $("#market").hide();
+    $("#list").show();
 
     e.preventDefault();
   });
